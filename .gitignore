@@ -3,3 +3,5 @@
 ################################################################################
 
 /IdentityServer4/.vs/IdentityServer4
+/.vs
+/IdentityServer4/packages

@@ -35,8 +35,6 @@ namespace MvcClientFull
                 ClientId = "mvc-full",
                 ClientSecret = "mvc-full-secret",
                 Authority = "http://localhost:5000",
-                RedirectUri = "http://localhost:5003",
-                PostLogoutRedirectUri = "http://localhost:5003",
                 SignInAsAuthenticationType = "Cookies",
                 RequireHttpsMetadata = false,
 
@@ -82,6 +80,9 @@ namespace MvcClientFull
 
                     RedirectToIdentityProvider = n =>
                     {
+                        n.ProtocolMessage.RedirectUri = n.Request.Scheme + "://" + n.Request.Host;
+                        n.ProtocolMessage.PostLogoutRedirectUri = n.Request.Scheme + "://" + n.Request.Host;
+
                         if (n.ProtocolMessage.RequestType == OpenIdConnectRequestType.Authentication)
                         {
                             n.ProtocolMessage.AcrValues = "tenant:clientId1"; // get this from session

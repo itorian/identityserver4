@@ -73,7 +73,7 @@ namespace MvcClientFull
                         }
 
                         identity.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
-                        identity.AddClaim(new Claim("access_token", n.ProtocolMessage.IdToken));
+                        identity.AddClaim(new Claim("access_token", n.ProtocolMessage.AccessToken));
 
                         n.AuthenticationTicket = new AuthenticationTicket(identity, n.AuthenticationTicket.Properties);
                     },

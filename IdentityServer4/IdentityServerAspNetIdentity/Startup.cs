@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using IdentityServerAspNetIdentity.Data;
 using Microsoft.Extensions.Configuration;
 using IdentityServerAspNetIdentity.Models;
 using Microsoft.Extensions.DependencyInjection;

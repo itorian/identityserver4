@@ -35,7 +35,9 @@
                     </span>
                 </a>
             </div>
-
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Custom Pages", "login", "user")</li>
+            </ul>
             @if (!string.IsNullOrWhiteSpace(name))
             {
                 <ul class="nav navbar-nav">
